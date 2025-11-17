@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+// import WhatsAppButton from "@/components/WhatsAppButton";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
 					<Navbar />
 					{children}
 					<Footer />
-					<WhatsAppButton />
+					{/* <WhatsAppButton /> */}
 				</ThemeProvider>
 			</body>
 		</html>

@@ -28,12 +28,11 @@ export default function Navbar() {
 	return (
 		<nav
 			className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-				isScrolled
-					? "bg-white/95 backdrop-blur-md shadow-lg py-2"
-					: "bg-white/10 backdrop-blur-sm py-3"
+				isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : ""
 			}`}
+			// bg-white/10 backdrop-blur-sm
 		>
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between items-center h-16">
 					{/* Logo */}
 					<Link href="/" className="flex items-center gap-2 group">
@@ -67,7 +66,7 @@ export default function Navbar() {
 						))}
 						<Link
 							href="/enquiry"
-							className="bg-emerald-600 text-white px-6 py-4 rounded-xl hover:bg-emerald-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-emerald-600/50 hover:scale-105"
+							className="bg-emerald-600 text-white px-6 py-2.5 rounded-xl hover:bg-emerald-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-emerald-600/50 hover:scale-105"
 						>
 							Enquire Now
 						</Link>

@@ -97,7 +97,7 @@ export default function EnquiryForm({
 						className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden"
 					>
 						{/* Decorative Header Background */}
-						<div className="absolute top-0 left-0 right-0 h-32 bg-linear-to-br from-emerald-600 to-green-500" />
+						<div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-br from-emerald-600 to-green-500" />
 
 						{/* Header */}
 						<div className="relative p-6 pb-4">
@@ -236,7 +236,7 @@ export default function EnquiryForm({
 							<button
 								type="submit"
 								disabled={loading || success}
-								className="w-full bg-linear-to-r from-emerald-600 to-green-600 text-white py-4 rounded-xl font-bold hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-emerald-600/50 group"
+								className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white py-4 rounded-xl font-bold hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-emerald-600/50 group"
 							>
 								{loading ? (
 									<>

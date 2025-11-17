@@ -17,7 +17,7 @@ export default function ServiceCard({ service, index }) {
 			className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
 		>
 			{/* Background Gradient */}
-			<div className="absolute inset-0 bg-linear-to-br from-emerald-50 via-white to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+			<div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
 			{/* Decorative Circle */}
 			<div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/10 rounded-full group-hover:scale-150 transition-transform duration-700" />
@@ -47,7 +47,7 @@ export default function ServiceCard({ service, index }) {
 			</div>
 
 			{/* Bottom Border Accent */}
-			<div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-emerald-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+			<div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-600 to-green-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 		</motion.div>
 	);
 }

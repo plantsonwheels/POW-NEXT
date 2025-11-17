@@ -41,7 +41,7 @@ export default function WhatsAppButton() {
 			/>
 
 			{/* Main Button */}
-			<div className="relative bg-linear-to-br from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300">
+			<div className="relative bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all duration-300">
 				<MessageCircle className="w-7 h-7" />
 			</div>
 

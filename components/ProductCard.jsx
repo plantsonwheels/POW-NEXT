@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
 			className="group relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-500"
 		>
 			{/* Image Container */}
-			<div className="relative h-72 overflow-hidden bg-linear-to-br from-emerald-50 to-green-50">
+			<div className="relative h-72 overflow-hidden bg-gradient-to-br from-emerald-50 to-green-50">
 				<motion.img
 					src={product.image || "/placeholder.svg"}
 					alt={product.name}
@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
 				/>
 
 				{/* Overlay Gradient */}
-				<div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+				<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
 				{/* Type Badge */}
 				<div className="absolute top-4 right-4 bg-emerald-600 text-white px-4 py-1.5 rounded-full text-xs font-bold capitalize shadow-lg backdrop-blur-sm">

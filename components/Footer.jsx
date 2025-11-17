@@ -13,7 +13,7 @@ export default function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="relative bg-linear-to-br from-emerald-900 via-emerald-800 to-green-900 text-white overflow-hidden">
+		<footer className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-900 text-white overflow-hidden">
 			{/* Decorative Elements */}
 			<div className="absolute top-0 right-0 w-96 h-96 bg-emerald-700/20 rounded-full -translate-y-48 translate-x-48" />
 			<div className="absolute bottom-0 left-0 w-64 h-64 bg-green-700/20 rounded-full translate-y-32 -translate-x-32" />

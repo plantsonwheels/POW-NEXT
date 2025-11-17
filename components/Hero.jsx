@@ -15,23 +15,18 @@ export default function Hero({ onEnquireClick }) {
 				transition={{ duration: 1.2, ease: "easeOut" }}
 			>
 				<div
-					className="max-w-screen max-h-screen w-full h-full bg-contain bg-center"
+					className="w-[100dvw] h-[100dvh] bg-cover bg-center"
 					style={{
 						backgroundImage: `url('/green-scooter-plants-delivery-service.jpg')`,
-						objectFit: "contain",
-						objectPosition: "center",
-						backgroundSize: "cover",
-						backgroundPosition: "center",
-						backgroundRepeat: "no-repeat",
 					}}
 				>
 					{/* Gradient Overlay */}
-					<div className="absolute inset-0 bg-linear-to-br from-emerald-900/80 via-black/60 to-emerald-800/70"></div>
+					<div className="absolute inset-0 bg-gradient-to-br from-emerald-900/80 via-black/60 to-emerald-800/70"></div>
 				</div>
 			</motion.div>
 
 			{/* Floating Particles Effect */}
-			<div className="absolute inset-0 z-10">
+			<div className="absolute inset-0 z-[1]">
 				{[...Array(20)].map((_, i) => (
 					<motion.div
 						key={i}
@@ -73,9 +68,9 @@ export default function Hero({ onEnquireClick }) {
 					</motion.div>
 
 					{/* Main Heading */}
-					<h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
+					<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
 						<span className="block">PLANTS ON</span>
-						<span className="block bg-linear-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
+						<span className="block bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
 							WHEELS
 						</span>
 					</h1>
@@ -127,7 +122,7 @@ export default function Hero({ onEnquireClick }) {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 1 }}
-						className="flex flex-wrap justify-center gap-8 pt-12 text-emerald-100"
+						className="flex flex-wrap justify-center gap-8 pt-4 text-emerald-100"
 					>
 						<div className="text-center">
 							<div className="text-3xl font-bold text-white">500+</div>
@@ -145,8 +140,8 @@ export default function Hero({ onEnquireClick }) {
 				</motion.div>
 
 				{/* Scroll Indicator */}
-				<motion.div
-					className="absolute -bottom-20 left-1/2 transform -translate-x-1/2"
+				{/* <motion.div
+					className="absolute bottom-3 left-1/2 transform -translate-x-1/2"
 					animate={{ y: [0, 10, 0] }}
 					transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
 				>
@@ -162,7 +157,7 @@ export default function Hero({ onEnquireClick }) {
 							/>
 						</div>
 					</div>
-				</motion.div>
+				</motion.div> */}
 			</div>
 		</section>
 	);

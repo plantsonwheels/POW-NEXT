@@ -48,7 +48,7 @@ export default function Home() {
 			<Hero onEnquireClick={() => setEnquiryOpen(true)} />
 
 			{/* About Section */}
-			<section className="py-20 bg-linear-to-b from-white to-emerald-50/30">
+			<section className="py-20 bg-gradient-to-b from-white to-emerald-50/30">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function Home() {
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
 							What is Plants on Wheels?
 						</h2>
-						<div className="w-24 h-1.5 bg-linear-to-r from-emerald-600 to-green-500 mx-auto mb-8 rounded-full"></div>
+						<div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-500 mx-auto mb-8 rounded-full"></div>
 						<p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
 							A unique mobile green initiative that delivers curated, healthy,
 							and vibrant plants directly to your doorstep. Our signature green
@@ -77,7 +77,7 @@ export default function Home() {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6, delay: 0.2 }}
-						className="relative bg-linear-to-br from-emerald-600 to-green-600 rounded-3xl p-10 md:p-12 overflow-hidden shadow-2xl"
+						className="relative bg-gradient-to-br from-emerald-600 to-green-600 rounded-3xl p-10 md:p-12 overflow-hidden shadow-2xl"
 					>
 						{/* Decorative Elements */}
 						<div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32" />
@@ -122,7 +122,7 @@ export default function Home() {
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
 							Why We're Needed Today
 						</h2>
-						<div className="w-24 h-1.5 bg-linear-to-r from-emerald-600 to-green-500 mx-auto rounded-full"></div>
+						<div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-500 mx-auto rounded-full"></div>
 					</motion.div>
 
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -158,7 +158,7 @@ export default function Home() {
 								className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden"
 							>
 								{/* Background linear */}
-								<div className="absolute inset-0 bg-linear-to-br from-emerald-50 to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+								<div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
 								{/* Content */}
 								<div className="relative z-10">
@@ -184,7 +184,7 @@ export default function Home() {
 			</section>
 
 			{/* Services Section */}
-			<section className="py-20 bg-linear-to-b from-emerald-50/30 to-white">
+			<section className="py-20 bg-gradient-to-b from-emerald-50/30 to-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -199,7 +199,7 @@ export default function Home() {
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
 							Our Services
 						</h2>
-						<div className="w-24 h-1.5 bg-linear-to-r from-emerald-600 to-green-500 mx-auto rounded-full"></div>
+						<div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-500 mx-auto rounded-full"></div>
 					</motion.div>
 
 					{!loading && services.length > 0 && (
@@ -228,7 +228,7 @@ export default function Home() {
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
 							Featured Plants
 						</h2>
-						<div className="w-24 h-1.5 bg-linear-to-r from-emerald-600 to-green-500 mx-auto mb-6 rounded-full"></div>
+						<div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-green-500 mx-auto mb-6 rounded-full"></div>
 						<p className="text-gray-600 max-w-2xl mx-auto text-lg">
 							Handpicked selection of our most popular and beautiful plants
 						</p>
@@ -250,7 +250,7 @@ export default function Home() {
 							>
 								<Link
 									href="/products"
-									className="inline-flex items-center gap-2 bg-linear-to-r from-emerald-600 to-green-600 text-white px-10 py-4 rounded-xl hover:from-emerald-700 hover:to-green-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-emerald-600/50 group"
+									className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white px-10 py-4 rounded-xl hover:from-emerald-700 hover:to-green-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-emerald-600/50 group"
 								>
 									<span>View All Products</span>
 									<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -271,7 +271,7 @@ export default function Home() {
 			{/* CTA Section */}
 			<section className="py-20 relative overflow-hidden">
 				{/* Background */}
-				<div className="absolute inset-0 bg-linear-to-br from-emerald-600 via-green-600 to-emerald-700" />
+				<div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-green-600 to-emerald-700" />
 
 				{/* Decorative Elements */}
 				<div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -translate-y-48 translate-x-48" />
