@@ -3,8 +3,27 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Hero({ onEnquireClick }) {
+    const [particles, setParticles] = useState([]);
+
+    useEffect(() => {
+        const w = typeof window !== "undefined" ? window.innerWidth : 0;
+        const h = typeof window !== "undefined" ? window.innerHeight : 0;
+        const count = 20;
+
+        setParticles(
+            Array.from({ length: count }, () => ({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                dy: Math.random() * 100 + 50,
+                delay: Math.random() * 2,
+                duration: Math.random() * 3 + 2,
+            }))
+        );
+    }, []);
+
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 			{/* Background Image with Overlay */}
@@ -27,22 +46,19 @@ export default function Hero({ onEnquireClick }) {
 
 			{/* Floating Particles Effect */}
 			<div className="absolute inset-0 z-[1]">
-				{[...Array(20)].map((_, i) => (
+				{particles.map((p, i) => (
 					<motion.div
 						key={i}
 						className="absolute w-2 h-2 bg-emerald-400/20 rounded-full"
-						initial={{
-							x: Math.random() * window.innerWidth,
-							y: Math.random() * window.innerHeight,
-						}}
+						initial={{ x: p.x, y: p.y }}
 						animate={{
-							y: [null, Math.random() * -100 - 50],
+							y: [p.y, p.y - p.dy],
 							opacity: [0, 1, 0],
 						}}
 						transition={{
-							duration: Math.random() * 3 + 2,
+							duration: p.duration,
 							repeat: Infinity,
-							delay: Math.random() * 2,
+							delay: p.delay,
 						}}
 					/>
 				))}
