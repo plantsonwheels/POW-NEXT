@@ -19,7 +19,11 @@ export default function ProductCard({ product }) {
 			{/* Image Container */}
 			<div className="relative h-72 overflow-hidden bg-gradient-to-br from-emerald-50 to-green-50">
 				<motion.img
-					src={product.image || "/placeholder.svg"}
+					src={
+						(product.images && product.images[0]) ||
+						product.image ||
+						"/placeholder.svg"
+					}
 					alt={product.name}
 					className="w-full h-full object-cover"
 					whileHover={{ scale: 1.1 }}
@@ -35,7 +39,7 @@ export default function ProductCard({ product }) {
 				</div>
 
 				{/* Like Button */}
-				<motion.button
+				{/* <motion.button
 					onClick={() => setIsLiked(!isLiked)}
 					whileTap={{ scale: 0.9 }}
 					className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2.5 rounded-full shadow-lg hover:bg-white transition-colors"
@@ -45,7 +49,7 @@ export default function ProductCard({ product }) {
 							isLiked ? "fill-red-500 text-red-500" : "text-gray-400"
 						}`}
 					/>
-				</motion.button>
+				</motion.button> */}
 
 				{/* Quick View on Hover */}
 				<div className="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -67,7 +71,7 @@ export default function ProductCard({ product }) {
 				</h3>
 
 				{/* Description */}
-				<p className="text-gray-600 text-sm mb-4 line-clamp-2 leading-relaxed">
+				<p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
 					{product.description}
 				</p>
 
@@ -75,7 +79,7 @@ export default function ProductCard({ product }) {
 				{product.benefits && product.benefits.length > 0 && (
 					<div className="mb-4">
 						<div className="flex flex-wrap gap-2">
-							{product.benefits.slice(0, 2).map((benefit, idx) => (
+							{product.benefits.slice(0, 1).map((benefit, idx) => (
 								<span
 									key={idx}
 									className="inline-flex items-center text-xs bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full font-medium border border-emerald-100"
@@ -83,9 +87,9 @@ export default function ProductCard({ product }) {
 									{benefit}
 								</span>
 							))}
-							{product.benefits.length > 2 && (
+							{product.benefits.length > 1 && (
 								<span className="inline-flex items-center text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-full font-medium">
-									+{product.benefits.length - 2} more
+									+{product.benefits.length - 1} more
 								</span>
 							)}
 						</div>

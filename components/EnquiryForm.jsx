@@ -78,7 +78,7 @@ export default function EnquiryForm({
 	return (
 		<AnimatePresence>
 			{isOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+					<div className="fixed inset-0 z-50 flex items-center justify-center p-4" data-lenis-prevent role="dialog" aria-modal="true">
 					{/* Backdrop */}
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -90,12 +90,13 @@ export default function EnquiryForm({
 
 					{/* Modal */}
 					<motion.div
-						initial={{ scale: 0.9, opacity: 0, y: 20 }}
-						animate={{ scale: 1, opacity: 1, y: 0 }}
-						exit={{ scale: 0.9, opacity: 0, y: 20 }}
-						transition={{ type: "spring", duration: 0.5 }}
-						className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden"
-					>
+							initial={{ scale: 0.9, opacity: 0, y: 20 }}
+							animate={{ scale: 1, opacity: 1, y: 0 }}
+							exit={{ scale: 0.9, opacity: 0, y: 20 }}
+							transition={{ type: "spring", duration: 0.5 }}
+							className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-hidden"
+							data-lenis-prevent
+						>
 						{/* Decorative Header Background */}
 						<div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-br from-emerald-600 to-green-500" />
 
@@ -119,6 +120,9 @@ export default function EnquiryForm({
 						{/* Form */}
 						<form
 							onSubmit={handleSubmit}
+							onWheel={(e) => e.stopPropagation()}
+							onTouchMove={(e) => e.stopPropagation()}
+							data-lenis-prevent
 							className="p-6 pt-2 space-y-4 overflow-y-auto max-h-[calc(90vh-8rem)]"
 						>
 							{/* Success Message */}

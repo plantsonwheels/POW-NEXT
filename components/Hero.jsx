@@ -6,23 +6,23 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Hero({ onEnquireClick }) {
-    const [particles, setParticles] = useState([]);
+	const [particles, setParticles] = useState([]);
 
-    useEffect(() => {
-        const w = typeof window !== "undefined" ? window.innerWidth : 0;
-        const h = typeof window !== "undefined" ? window.innerHeight : 0;
-        const count = 20;
+	useEffect(() => {
+		const w = typeof window !== "undefined" ? window.innerWidth : 0;
+		const h = typeof window !== "undefined" ? window.innerHeight : 0;
+		const count = 20;
 
-        setParticles(
-            Array.from({ length: count }, () => ({
-                x: Math.random() * w,
-                y: Math.random() * h,
-                dy: Math.random() * 100 + 50,
-                delay: Math.random() * 2,
-                duration: Math.random() * 3 + 2,
-            }))
-        );
-    }, []);
+		setParticles(
+			Array.from({ length: count }, () => ({
+				x: Math.random() * w,
+				y: Math.random() * h,
+				dy: Math.random() * 100 + 50,
+				delay: Math.random() * 2,
+				duration: Math.random() * 3 + 2,
+			}))
+		);
+	}, []);
 
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -36,7 +36,7 @@ export default function Hero({ onEnquireClick }) {
 				<div
 					className="w-[100dvw] h-[100dvh] bg-cover bg-center"
 					style={{
-						backgroundImage: `url('/green-scooter-plants-delivery-service.jpg')`,
+						backgroundImage: `url('/BackgroundImage.png')`,
 					}}
 				>
 					{/* Gradient Overlay */}

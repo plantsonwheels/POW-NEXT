@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 // import WhatsAppButton from "@/components/WhatsAppButton";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import LayoutShell from "@/components/LayoutShell";
 
 const geistSans = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -47,10 +48,7 @@ export default function RootLayout({ children }) {
 					defaultTheme="light"
 					enableSystem={false}
 				>
-					<Navbar />
-					{children}
-					<Footer />
-					{/* <WhatsAppButton /> */}
+					<LayoutShell>{children}</LayoutShell>
 				</ThemeProvider>
 			</body>
 		</html>
